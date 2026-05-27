@@ -1,4 +1,4 @@
-import "../styles/Hero.css";
+import '../styles/Hero.css';
 
 function Hero() {
   const scrollToSection = (id) => {
