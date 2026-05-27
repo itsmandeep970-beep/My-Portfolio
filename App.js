@@ -1,4 +1,3 @@
-import SpiderBackground from "./SpiderBackground";
 
 function App() {
   return (
