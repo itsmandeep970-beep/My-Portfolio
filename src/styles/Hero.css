@@ -1,0 +1,95 @@
+#hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10% 3rem 4rem;
+  position: relative;
+  color: #ffff;
+}
+
+.hero-tag {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #DDFE6C;
+  font-size: 14px;
+  color: #DDFE6C;
+  width: 0;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  animation: typing 4s steps(25, end) infinite alternate,
+             blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+  0%   { width: 0; }
+  60%  { width: 26ch; }
+  100% { width: 0; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+h1 {
+  font-family: var(--ff-display);
+  font-weight: 900;
+  font-size: clamp(3rem, 8vw, 7rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  margin-bottom: 2rem;
+  margin-left: 4rem;
+  text-align: left;
+}
+
+h1 em {
+  font-style: normal;
+  color: var(--accent);
+}
+
+h1 .outline {
+  -webkit-text-stroke: 1px #ffff;
+  color: transparent;
+}
+
+.hero-sub {
+  max-width: 480px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  #hero {
+    padding: 6rem 1.5rem 3rem;
+    text-align: center;
+  }
+
+  h1 {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .hero-sub {
+    margin: 0 auto 2rem;
+  }
+
+  .hero-cta {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 2.2rem; }
+}
+

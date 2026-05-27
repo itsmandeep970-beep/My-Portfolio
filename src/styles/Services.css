@@ -1,0 +1,119 @@
+#services {
+  background: transparent;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.service-card {
+  background: rgba(10, 10, 15, 0.85);
+
+  /* FIX */
+  border: 2px solid var(--border);
+
+  border-radius: 8px;
+  padding: 2rem;
+
+  position: relative;
+  overflow: hidden;
+
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease,
+    box-shadow 0.4s ease,
+    background 0.4s ease;
+}
+
+/* Glow Layer */
+.service-card::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    135deg,
+    rgba(200, 240, 100, 0.15),
+    rgba(0, 255, 255, 0.08),
+    transparent
+  );
+
+  opacity: 0;
+
+  transition: opacity 0.4s ease;
+
+  z-index: 0;
+}
+
+/* Hover Effect */
+.service-card:hover {
+  transform: translateY(-10px) scale(1.02);
+
+  border-color: var(--accent);
+
+  box-shadow:
+    0 0 25px rgba(200, 240, 100, 0.25),
+    0 10px 30px rgba(0, 0, 0, 0.4);
+
+  background: rgba(15, 15, 25, 0.95);
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+/* Content above glow */
+.service-card * {
+  position: relative;
+  z-index: 1;
+}
+
+.service-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+
+  transition:
+    transform 0.4s ease,
+    color 0.4s ease;
+}
+
+/* Icon Animation */
+.service-card:hover .service-icon {
+  transform: rotate(8deg) scale(1.2);
+  color: var(--accent);
+}
+
+.service-card h3 {
+  font-size: 1.1rem;
+  color: #DDFE6C;
+  margin-bottom: 0.8rem;
+
+  transition: color 0.3s ease;
+}
+
+.service-card:hover h3 {
+  color: white;
+}
+
+.service-card p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+
+  transition: color 0.3s ease;
+}
+
+.service-card:hover p {
+  color: #d6d6d6;
+}
+
+@media (max-width: 768px) {
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+}

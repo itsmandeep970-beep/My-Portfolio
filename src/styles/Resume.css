@@ -1,0 +1,73 @@
+#resume {
+  background: transparent;
+}
+
+.resume-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.timeline-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.timeline-title .icon {
+  font-size: 1.5rem;
+}
+
+.timeline-title h3 {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.timeline {
+  border-left: 2px solid var(--border);
+  padding-left: 1.5rem;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -1.85rem;
+  top: 6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--bg);
+}
+
+.timeline-item h4 {
+  font-size: 0.95rem;
+  color: #fff;
+  margin-bottom: 0.3rem;
+}
+
+.timeline-item .date {
+  font-size: 0.78rem;
+  color: var(--accent);
+  font-family: var(--ff-mono);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-item p {
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .resume-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
