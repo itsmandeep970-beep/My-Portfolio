@@ -28,7 +28,7 @@ function About() {
               <div className="info-item"><span className="info-key">Freelance:</span><span className="info-val">Available</span></div>
             </div>
             <div className="about-btns">
-              <a href="/public/Resume .pdf" className="btn btn-primary">Download Resume</a>
+              <a href="/public/Resume.pdf" className="btn btn-primary">Download Resume</a>
               <a href="tel:+919355263697" className="btn btn-outline">Contact Me</a>
             </div>
           </div>
