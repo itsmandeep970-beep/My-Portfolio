@@ -11,7 +11,7 @@ function Hero() {
       <div className="hero-tag">Available for work</div>
 
       <h1>
-        Full-Stack <br />
+        MERN-Stack <br />
         <em>Web</em> & <br />
         <span className="outline">Developer</span>
       </h1>
